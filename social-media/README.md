@@ -10,17 +10,22 @@ Automated daily social media posts for **Express Valet Services** (expressvalete
 - Produces a **DALL·E image prompt** (or auto-generates an image if OpenAI key is set)
 - Optional **Claude AI** mode to generate fresh, unique copy each day
 
-## Services Covered (7-day rotation)
+## Services Covered
 
-| # | Service |
-|---|---------|
-| 1 | Dry Cleaning |
-| 2 | Laundry Pickup & Delivery |
-| 3 | Stain Removal |
-| 4 | Comforter & Bedding Cleaning |
-| 5 | Suit & Formal Wear Cleaning |
-| 6 | Express Rush Cleaning |
-| 7 | Curtain & Drape Cleaning |
+| # | Service | Status |
+|---|---------|--------|
+| 1 | Dry Cleaning | Active |
+| 2 | Laundry Pickup & Delivery | Active — 10 lb minimum |
+| 3 | Stain Removal | Active |
+| 4 | Comforter & Bedding Cleaning | Active |
+| 5 | Curtain & Drape Cleaning | Active |
+| 6 | Custom Alterations | Pending — tailor consultation |
+
+**Business rules built into every post:**
+- Flat **$100** fee covers pickup & delivery for any service
+- **Daytime** pickup & delivery only
+- **5-day** turnaround (no rush/same-day service)
+- Laundry pickup requires a **10 lb minimum**
 
 ## Setup
 

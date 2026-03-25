@@ -4,97 +4,92 @@
     "website": "expressvaleteservices.com",
     "tagline": "Premium Dry Cleaning & Laundry Pickup & Delivery"
   },
+  "notes": {
+    "pricing": "$100 flat fee covers pickup & delivery for any service",
+    "laundry_minimum": "10 lb minimum per laundry pickup",
+    "turnaround": "5-day service — no rush/same-day option",
+    "hours": "Daytime pickup & delivery only",
+    "pending": "Custom Alterations — content to be added after tailor discussion"
+  },
   "services": [
     {
       "id": 1,
       "service": "Dry Cleaning",
       "instagram": {
-        "caption": "Give your garments the royal treatment they truly deserve! ✨ At Express Valet Services, our professional dry cleaning service handles your most delicate and treasured clothing with expert precision. From tailored suits and evening gowns to silk blouses and cashmere sweaters — we use advanced, eco-friendly cleaning solutions that gently remove dirt, stains, and odors without harming your fabrics. No shrinking, no fading, no damage. Just perfectly clean, refreshed garments returned right to your door. Skip the hassle of driving to the cleaners — we come to you! Schedule your free pickup today at expressvaleteservices.com and discover the convenience of professional dry cleaning delivered. 👗👔",
+        "caption": "Give your garments the care they truly deserve! ✨ At Express Valet Services, our professional dry cleaning handles your most delicate clothing with expert precision — silks, blouses, cashmere, and more. We use eco-friendly solutions that gently remove dirt, stains, and odors without harming your fabrics. No shrinking, no fading, no damage. Our daytime pickup and delivery works around your schedule, and at just $100 flat for pickup & delivery, professional garment care has never been more accessible. Everything comes back fresh and perfectly cleaned within 5 days — right to your door. No more running to the dry cleaner! Book your pickup today at expressvaleteservices.com. 👗",
         "hashtags": ["#DryCleaning", "#ExpressValetServices", "#LaundryPickupDelivery", "#ProfessionalCleaning"]
       },
       "facebook": {
-        "caption": "Your wardrobe deserves professional care — and now it's easier than ever to get it! 👔✨ At Express Valet Services, we specialize in premium dry cleaning for all your delicate and everyday garments. Silk blouses, wool suits, evening gowns, cashmere — our experts know exactly how to treat every fabric type. We use advanced, eco-friendly cleaning solutions that eliminate dirt, stains, and odors while preserving the color and texture of your clothes. No trips to the cleaners needed — we pick up from your home or office and deliver back to you fresh and perfectly cleaned. It's professional dry cleaning, reimagined for your busy lifestyle. Book your first pickup now at expressvaleteservices.com! We're just one click away. 🌟",
-        "hashtags": ["#DryCleaning", "#ExpressValetServices", "#ClothingCare", "#FreePickup"]
+        "caption": "Your wardrobe deserves professional care — and it's never been easier or more affordable to get it! 👔✨ At Express Valet Services, we specialize in premium dry cleaning for your most delicate and everyday garments. Silks, blouses, cashmere, and delicate fabrics — our experts know exactly how to treat every piece. We use advanced, eco-friendly cleaning solutions that preserve color and texture while eliminating dirt and odors. Best of all, we schedule daytime pickups and deliver right back to your door — all for a flat $100 service fee. Your fresh, perfectly cleaned items are returned to you within 5 days. No trips to the cleaners, no hassle. Book online at expressvaleteservices.com and experience the difference! 🌟",
+        "hashtags": ["#DryCleaning", "#ExpressValetServices", "#ClothingCare", "#DaytimeDelivery"]
       },
-      "image_prompt": "A professional dry cleaning studio scene showing neatly pressed suits and elegant dresses hanging on a rack in clear garment bags, soft warm lighting, clean and modern environment, with a logo placeholder, hyper-realistic commercial photography style"
+      "image_prompt": "A professional dry cleaning scene showing neatly pressed dresses and blouses hanging on a rack in clear garment bags, soft warm lighting, clean and modern environment, hyper-realistic commercial photography style"
     },
     {
       "id": 2,
       "service": "Laundry Pickup & Delivery",
       "instagram": {
-        "caption": "Tired of spending your weekends buried in laundry? 🧺 Express Valet Services makes laundry day completely effortless! Our convenient pickup and delivery laundry service handles everything — washing, drying, and folding — then brings your fresh, clean clothes right back to your door. We use premium detergents, handle each load with care, and keep your items separated to prevent mix-ups. Whether it's a small load or a mountain of clothes for the whole family, we've got you covered. Reclaim your weekends and let us handle the dirty work! Book your first pickup today at expressvaleteservices.com — fresh laundry, zero effort. 💪",
+        "caption": "Laundry day is officially canceled! 🧺 Express Valet Services picks up your laundry, washes, dries, and folds everything, then delivers it back to your door — fresh and clean. Our laundry service has a 10 lb minimum pickup, so every order is a full, worthwhile load. At a flat $100 for our pickup & delivery service, you get professional laundry care without the laundromat stress. We schedule daytime pickups and deliveries to fit your day, and your clean laundry is back to you within 5 days. Reclaim your weekends — book your first pickup at expressvaleteservices.com. Fresh clothes, zero effort! 💪",
         "hashtags": ["#LaundryPickupDelivery", "#ExpressValetServices", "#LaundryCare", "#FreshLaundry"]
       },
       "facebook": {
-        "caption": "Who has time for laundry anymore? You do — because we'll do it for you! 🧺✨ Introducing the stress-free way to keep your clothes clean: Express Valet Services laundry pickup and delivery. We come to your door, collect your laundry, wash and dry everything using premium detergents and professional-grade equipment, fold it neatly, and bring it back to you fresh and clean. No more sitting at the laundromat, no more overflowing hampers, no more wasted weekends. We handle every load with care and guarantee your satisfaction every time. Perfect for busy families, professionals, and anyone who values their time! Get started today at expressvaleteservices.com — your first pickup is just a few clicks away. 👕👗",
+        "caption": "Who has time for laundry anymore? We do — and we'll handle it for you! 🧺✨ Express Valet Services makes laundry effortless with our daytime pickup and delivery service. We come to your door, collect your laundry (10 lb minimum per pickup), wash and dry using premium detergents and professional-grade equipment, fold everything neatly, and return it fresh and clean within 5 days — all for a flat $100 service fee. No more laundromats, no more overflowing hampers, no more wasted weekends. Perfect for busy families and professionals who value their time. Get started today at expressvaleteservices.com and schedule your first daytime pickup! 👕👗",
         "hashtags": ["#LaundryService", "#ExpressValetServices", "#PickupAndDelivery", "#ConvenientLaundry"]
       },
-      "image_prompt": "A cheerful laundry delivery scene showing a smiling delivery person handing a neatly folded laundry bag to a happy homeowner at the front door, warm suburban neighborhood background, bright and inviting lighting, clean and modern style, hyper-realistic commercial photography"
+      "image_prompt": "A cheerful daytime laundry delivery scene showing a smiling delivery person handing a neatly folded laundry bag to a happy homeowner at the front door, bright sunny suburban neighborhood background, warm and inviting lighting, hyper-realistic commercial photography style"
     },
     {
       "id": 3,
       "service": "Stain Removal",
       "instagram": {
-        "caption": "Don't let a stain ruin your favorite outfit! 👗✨ At Express Valet Services, our professional stain removal specialists tackle even the most stubborn, set-in stains that regular washing just can't fix. Coffee spills, red wine, grease, ink, grass — nothing is too tough for our expert treatment process. We carefully analyze the fabric type and stain composition to apply the most effective and gentle solution possible, preserving your garment's color, texture, and shape. Countless clothes written off as ruined have been fully restored by our team. Before you throw it out, let us try! Visit expressvaleteservices.com to schedule a pickup and give your garment a second chance. 💪",
+        "caption": "Don't let a stain end your favorite outfit's story! 👗✨ Express Valet Services stain removal specialists tackle even the most stubborn stains regular washing can't fix — coffee, red wine, grease, ink, grass marks, and more. We analyze the fabric type and stain composition to apply the most effective, gentle treatment possible, preserving color and texture throughout. Countless garments our customers thought were ruined have been fully restored! We schedule daytime pickups, treat your items with expert care, and deliver back within 5 days — all for a flat $100 pickup & delivery fee. Before you throw it out, let us try! Book at expressvaleteservices.com today. 💪",
         "hashtags": ["#StainRemoval", "#ExpressValetServices", "#ClothingRescue", "#ProfessionalCleaning"]
       },
       "facebook": {
-        "caption": "Has a stubborn stain left your favorite piece of clothing unwearable? Don't give up on it just yet! 👗 At Express Valet Services, our professional stain removal team specializes in bringing garments back to life. Whether it's a red wine disaster, a coffee spill, grease from cooking, ink marks, or old set-in stains — our experts use advanced treatment techniques specifically designed for each fabric type and stain composition. We work gently and precisely to remove the stain without damaging the fabric's color or texture. Many items our customers thought were ruined came back looking brand new! Life's too short to retire your favorite clothes over a stain. Schedule a pickup at expressvaleteservices.com and let us work our magic. ✨💪",
+        "caption": "That stubborn stain doesn't have to be the end for your favorite piece of clothing! 👗 At Express Valet Services, our stain removal specialists bring even badly stained garments back to life. Red wine, coffee, grease, ink, old set-in stains — our team uses advanced treatment techniques tailored to each specific fabric type and stain. We work carefully to remove the stain without damaging the fabric's color or texture. Many items customers believed were permanently ruined came back looking brand new! Schedule a daytime pickup at expressvaleteservices.com and your restored garment will be back in your hands within 5 days — all for a flat $100 pickup & delivery fee. Give your clothes a second chance. ✨💪",
         "hashtags": ["#StainRemoval", "#ExpressValetServices", "#LaundryExperts", "#RescueYourClothes"]
       },
-      "image_prompt": "A close-up split before-and-after image of a white shirt — left side showing a dark red wine stain, right side showing the shirt completely clean and bright white, professional lighting, crisp and clean commercial photography style on a clean white background"
+      "image_prompt": "A striking split before-and-after close-up of a white shirt — left side showing a dark red wine stain, right side perfectly clean and bright white, professional studio lighting, crisp commercial photography style on a clean white background"
     },
     {
       "id": 4,
       "service": "Comforter & Bedding Cleaning",
       "instagram": {
-        "caption": "When did you last deep-clean your comforter? 🛏️ Express Valet Services offers professional cleaning for all your bedding — comforters, duvets, pillows, mattress pads, and more. Standard home washing machines often can't fully clean bulky bedding, leaving behind allergens, dust mites, and hidden grime. Our deep-cleaning process eliminates 99% of allergens and bacteria, leaving your bedding fresh, fluffy, and hygienically clean. Perfect for allergy sufferers or anyone who wants a truly clean sleep environment! We pick up, professionally clean, and deliver your bedding right back to you fresh and beautifully folded. Book now at expressvaleteservices.com and sleep better tonight. 😴✨",
+        "caption": "When did you last deep-clean your comforter? 🛏️ Express Valet Services offers professional cleaning for comforters, duvets, pillows, mattress pads, and all bedding. Home washing machines often can't fully clean bulky items — leaving behind allergens, dust mites, and hidden grime. Our deep-cleaning process eliminates 99% of allergens and bacteria, leaving your bedding fresh, fluffy, and genuinely clean. Especially important for allergy and asthma sufferers! We schedule daytime pickup and deliver back within 5 days — all for a flat $100 service fee. Book your bedding cleaning now at expressvaleteservices.com and sleep better tonight! 😴✨",
         "hashtags": ["#BeddingCleaning", "#ExpressValetServices", "#ComforterCleaning", "#AllergenFree"]
       },
       "facebook": {
-        "caption": "Your bed should be your sanctuary — and that means truly clean bedding! 🛏️✨ At Express Valet Services, we provide professional deep-cleaning for all your bedding items: comforters, duvets, pillows, blankets, mattress pads, and more. The truth is, home washing machines often can't adequately clean bulky items like comforters — they get compressed, not fully agitated, and may still harbor dust mites, allergens, and bacteria after washing. Our professional equipment and deep-cleaning process reaches every fiber, eliminating allergens and leaving your bedding fresh, fluffy, and genuinely clean. It's especially beneficial for allergy or asthma sufferers. We offer convenient pickup and delivery — just schedule online at expressvaleteservices.com and sleep better knowing your bedding is truly clean. 😴💙",
+        "caption": "Your bed should feel like a true sanctuary — and that starts with genuinely clean bedding! 🛏️✨ At Express Valet Services, we provide professional deep-cleaning for comforters, duvets, pillows, blankets, mattress pads, and more. The truth is, home washers often can't adequately clean bulky bedding — it may still harbor dust mites, allergens, and bacteria after a regular wash cycle. Our professional equipment reaches every fiber, eliminating allergens and leaving bedding fresh, fluffy, and truly clean. Perfect for allergy and asthma sufferers! Schedule a daytime pickup at expressvaleteservices.com and your freshly cleaned bedding is delivered back within 5 days — all for a flat $100 pickup & delivery fee. Sleep clean, sleep well. 😴💙",
         "hashtags": ["#BeddingCleaning", "#ExpressValetServices", "#ComforterCleaning", "#HealthyHome"]
       },
-      "image_prompt": "A cozy, beautifully made bed with a freshly cleaned white fluffy comforter and crisp pillows, soft warm lighting, clean and airy bedroom setting, professional interior photography style, fresh and inviting atmosphere"
+      "image_prompt": "A cozy, beautifully made bed with a freshly cleaned white fluffy comforter and crisp clean pillows, soft warm natural light, clean and airy bedroom setting, professional interior photography style, fresh and inviting atmosphere"
     },
     {
       "id": 5,
-      "service": "Suit & Formal Wear Cleaning",
-      "instagram": {
-        "caption": "Your professional image matters — and so does the condition of your clothes! 👔✨ At Express Valet Services, we specialize in expert suit and formal wear cleaning to keep you looking sharp, polished, and confident. Suits, tuxedos, blazers, dress pants, and formalwear require specialized care that home washing simply cannot provide. Our dry cleaning experts use precision techniques to remove stains, restore shape, eliminate wrinkles, and preserve the structure and sheen of fine fabrics. Whether you're preparing for a big meeting, a wedding, or a special event, we'll have your formalwear looking impeccable. Visit expressvaleteservices.com to schedule your suit pickup today. Look sharp, feel confident! 💼",
-        "hashtags": ["#SuitCleaning", "#ExpressValetServices", "#FormalWear", "#DryCleaningExperts"]
-      },
-      "facebook": {
-        "caption": "A well-maintained suit speaks volumes before you even say a word. 👔💼 At Express Valet Services, we understand how important your professional appearance is — that's why we offer expert cleaning for suits, blazers, tuxedos, dress pants, and all formalwear. Unlike regular washing, our specialized dry cleaning process protects the structure and integrity of your suit's fabric, removes stains and odors, restores the shape of the garment, and gives it a crisp, freshly pressed finish. We handle everything from everyday business suits to special occasion tuxedos with the same meticulous attention to detail. Don't trust your investment pieces to just any cleaner. Book your formal wear cleaning pickup at expressvaleteservices.com today and step out looking your absolute best every time. ✨",
-        "hashtags": ["#SuitCleaning", "#ExpressValetServices", "#ProfessionalDryCleaning", "#FormalWearCare"]
-      },
-      "image_prompt": "A close-up of a perfectly pressed dark charcoal suit jacket hanging on a wooden hanger, crisp lapels and clean stitching visible, soft studio lighting with a clean white background, professional fashion photography style, sharp and elegant"
-    },
-    {
-      "id": 6,
-      "service": "Express Rush Cleaning",
-      "instagram": {
-        "caption": "Need your clothes cleaned FAST? ⚡ Express Valet Services has you covered with our Rush Cleaning Service! We understand that life moves quickly — sometimes you need same-day or next-day turnaround without sacrificing quality. Last-minute work trip, unexpected event, wardrobe emergency? No problem. Our express service delivers professional dry cleaning and laundry at lightning speed, because when time is short, quality should never suffer. Fast turnaround, expert results, convenient pickup and delivery — all in one service. Schedule your rush cleaning at expressvaleteservices.com today and let us move at your pace. Fast. Fresh. Professional. 💯✨",
-        "hashtags": ["#RushCleaning", "#ExpressValetServices", "#SameDayCleaning", "#ExpressDryCleaning"]
-      },
-      "facebook": {
-        "caption": "Life doesn't always give you time to plan — but we're always ready when you need us most! ⚡ Express Valet Services offers a Rush Cleaning Service designed for those moments when you need your clothes professionally cleaned in a hurry. Whether it's a sudden business trip, an unexpected invitation to a formal event, or simply a wardrobe emergency — our express service provides the same expert dry cleaning and laundry quality with a priority same-day or next-day turnaround. We never cut corners, even on rush orders. Your clothes will come back spotless, pressed, and ready to wear — fast. Don't stress over a laundry emergency. Visit expressvaleteservices.com to schedule your rush pickup right now. Because fast and excellent can absolutely go together. 💯👔",
-        "hashtags": ["#RushCleaning", "#ExpressValetServices", "#SameDayService", "#EmergencyCleaning"]
-      },
-      "image_prompt": "A dynamic image showing a fast delivery motorbike or van with a laundry bag in front of a city skyline, motion blur to suggest speed, bold colors, modern and professional commercial advertising style, conveying urgency and reliability"
-    },
-    {
-      "id": 7,
       "service": "Curtain & Drape Cleaning",
       "instagram": {
-        "caption": "Your curtains are collecting more dust and allergens than you realize! 🏠✨ Express Valet Services offers professional curtain and drape cleaning to refresh your home and improve your indoor air quality. Over time, window treatments trap dust, pet dander, smoke, and odors — and most fabrics can't be safely cleaned in a home washer without risking shrinkage or damage. Our specialists carefully clean, press, and restore your curtains to like-new condition, preserving their color, drape, and fabric integrity. We handle all types — linen, silk, velvet, sheers, and blackout curtains. Book a pickup at expressvaleteservices.com and breathe easier in a truly fresh home. Your home deserves to look its best! 🌿",
+        "caption": "Your curtains are collecting more dust and allergens than you realize! 🏠✨ Express Valet Services offers professional curtain and drape cleaning to refresh your home and improve your indoor air quality. Over time, window treatments trap dust, pet dander, smoke, and odors — and most fabrics risk shrinkage or damage in a home washer. Our specialists clean, press, and restore your curtains to like-new condition, handling all fabric types — linen, silk, velvet, sheers, and blackout curtains. Daytime pickup, 5-day turnaround, delivered back to your door — all for a flat $100 service fee. Book at expressvaleteservices.com and breathe easier in a truly fresh home! 🌿",
         "hashtags": ["#CurtainCleaning", "#ExpressValetServices", "#HomeCleaning", "#FreshHome"]
       },
       "facebook": {
-        "caption": "When was the last time you had your curtains professionally cleaned? 🏠 Most homeowners overlook window treatments when deep cleaning their homes — but curtains and drapes are some of the biggest collectors of dust, allergens, pet dander, cooking fumes, and odors in your living space. At Express Valet Services, we offer professional curtain and drape cleaning that thoroughly removes all of that buildup while preserving the color, texture, and shape of your window treatments. We carefully handle all fabric types — linen, silk, velvet, sheer panels, blackout curtains — and return them fresh, pressed, and looking like new. No need to take them down and bring them in — we handle pickup and delivery! Schedule your curtain cleaning at expressvaleteservices.com today. 🌿✨",
+        "caption": "When was the last time you had your curtains professionally cleaned? 🏠 Most people overlook window treatments — but curtains and drapes are among the biggest collectors of dust, allergens, pet dander, and cooking odors in your home. At Express Valet Services, our professional cleaning removes all that buildup while carefully preserving the color, texture, and shape of every window treatment. We handle all fabric types — linen, silk, velvet, sheer panels, and blackout curtains — and return them fresh, pressed, and like new within 5 days. We offer convenient daytime pickup and delivery, all for a flat $100 service fee. Book today at expressvaleteservices.com and give your home a real refresh! 🌿✨",
         "hashtags": ["#CurtainCleaning", "#ExpressValetServices", "#DrapesCleaning", "#HomeRefresh"]
       },
-      "image_prompt": "Elegant living room with beautiful freshly cleaned floor-length white linen curtains billowing softly in natural light, warm sunlit interior, clean and airy atmosphere, professional interior design photography style, inviting and fresh"
+      "image_prompt": "Elegant living room with beautiful freshly cleaned floor-length white linen curtains billowing softly in warm natural daylight, clean and airy sunlit interior, professional interior design photography style, fresh and inviting atmosphere"
+    },
+    {
+      "id": 6,
+      "service": "Custom Alterations",
+      "status": "PENDING — content to be finalized after discussion with tailor",
+      "instagram": {
+        "caption": "COMING SOON — to be written after tailor consultation.",
+        "hashtags": ["#CustomAlterations", "#ExpressValetServices", "#TailoringServices", "#PerfectFit"]
+      },
+      "facebook": {
+        "caption": "COMING SOON — to be written after tailor consultation.",
+        "hashtags": ["#CustomAlterations", "#ExpressValetServices", "#TailoringServices", "#PerfectFit"]
+      },
+      "image_prompt": "A professional tailor carefully pinning a garment on a dress form in a bright, clean tailoring studio, measuring tape and sewing tools visible, warm and professional lighting, commercial photography style"
     }
   ]
 }
