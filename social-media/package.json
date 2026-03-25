@@ -1,0 +1,18 @@
+{
+  "name": "express-valet-social-media",
+  "version": "1.0.0",
+  "description": "Social media post generator for Express Valet Services",
+  "main": "generate.js",
+  "scripts": {
+    "generate": "node generate.js",
+    "schedule": "node scheduler.js",
+    "preview": "node generate.js --preview"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "node-cron": "^3.0.3",
+    "openai": "^4.0.0",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0"
+  }
+}
