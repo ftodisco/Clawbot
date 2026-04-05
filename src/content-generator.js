@@ -1,10 +1,12 @@
 /**
  * content-generator.js
- * Uses Claude claude-opus-4-6 with adaptive thinking to generate a complete
- * YouTube video package: title, description, tags, script, and thumbnail text.
+ * Generates a complete YouTube video package (title, description, tags, script).
+ *
+ * Provider selection (in priority order):
+ *   1. OpenRouter  — set OPENROUTER_API_KEY  (any model via openrouter.ai)
+ *   2. Anthropic   — set ANTHROPIC_API_KEY   (direct API, claude-opus-4-6)
  */
 
-import Anthropic from '@anthropic-ai/sdk';
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -12,16 +14,95 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const niche = JSON.parse(readFileSync(join(__dirname, '../config/niche.json'), 'utf-8'));
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
 /**
  * Generate a complete YouTube video content package.
  * @param {string[]} previousTitles - Recently used titles to avoid repetition
  * @returns {Promise<object>} Content object with title, description, tags, script, etc.
  */
 export async function generateContent(previousTitles = []) {
-  console.log('🤖 Generating content with Claude claude-opus-4-6...');
+  const useOpenRouter = !!process.env.OPENROUTER_API_KEY;
+  const provider = useOpenRouter ? 'OpenRouter' : 'Anthropic';
+  const model = useOpenRouter
+    ? (process.env.OPENROUTER_MODEL || 'anthropic/claude-opus-4')
+    : 'claude-opus-4-6';
 
+  console.log(`🤖 Generating content via ${provider} (${model})...`);
+
+  const prompt = buildPrompt(previousTitles);
+
+  const text = useOpenRouter
+    ? await callOpenRouter(prompt, model)
+    : await callAnthropic(prompt);
+
+  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  if (!jsonMatch) {
+    throw new Error(`${provider} did not return valid JSON.\n${text.slice(0, 400)}`);
+  }
+
+  const content = JSON.parse(jsonMatch[0]);
+  content.fullScript = buildFullScript(content.script);
+  content.isShort = niche.videoStyle.videoDuration === 'short';
+
+  console.log(`✅ Content generated: "${content.title}"`);
+  console.log(`   Topic: ${content.topic}`);
+  console.log(`   Script: ~${content.fullScript.split(' ').length} words`);
+
+  return content;
+}
+
+// ─── Provider: OpenRouter (OpenAI-compatible) ─────────────────────────────────
+
+async function callOpenRouter(prompt, model) {
+  const { default: OpenAI } = await import('openai');
+
+  const client = new OpenAI({
+    baseURL: 'https://openrouter.ai/api/v1',
+    apiKey: process.env.OPENROUTER_API_KEY,
+    defaultHeaders: {
+      'HTTP-Referer': 'https://github.com/ftodisco/Clawbot',
+      'X-Title': 'Clawbot YouTube Automation',
+    },
+  });
+
+  const stream = await client.chat.completions.create({
+    model,
+    max_tokens: 8000,
+    stream: true,
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  let text = '';
+  for await (const chunk of stream) {
+    text += chunk.choices[0]?.delta?.content || '';
+  }
+  return text;
+}
+
+// ─── Provider: Anthropic (direct) ────────────────────────────────────────────
+
+async function callAnthropic(prompt) {
+  const { default: Anthropic } = await import('@anthropic-ai/sdk');
+
+  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+
+  const stream = await client.messages.stream({
+    model: 'claude-opus-4-6',
+    max_tokens: 8000,
+    thinking: { type: 'adaptive' },
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  const response = await stream.finalMessage();
+
+  return response.content
+    .filter(b => b.type === 'text')
+    .map(b => b.text)
+    .join('');
+}
+
+// ─── Prompt builder ───────────────────────────────────────────────────────────
+
+function buildPrompt(previousTitles) {
   const isShort = niche.videoStyle.videoDuration === 'short';
   const topicsList = niche.topics.map(t => `- ${t}`).join('\n');
   const avoidSection = previousTitles.length > 0
@@ -29,10 +110,10 @@ export async function generateContent(previousTitles = []) {
     : '';
 
   const formatGuide = isShort
-    ? `YouTube Short (vertical, under 60 seconds). Script must be ~100–130 words total. Add "#Shorts" at end of title.`
-    : `Regular YouTube video (5–8 minutes). Script must be ~900–1200 words total across all sections.`;
+    ? 'YouTube Short (vertical, under 60 seconds). Script must be ~100–130 words total. Add "#Shorts" at end of title.'
+    : 'Regular YouTube video (5–8 minutes). Script must be ~900–1200 words total across all sections.';
 
-  const prompt = `You are a YouTube content creator for the channel "${niche.channel.name}".
+  return `You are a YouTube content creator for the channel "${niche.channel.name}".
 
 Channel tagline: "${niche.channel.tagline}"
 Niche: ${niche.channel.niche}
@@ -48,18 +129,18 @@ Generate a complete video package. Return ONLY valid JSON matching this structur
 
 {
   "title": "SEO-optimized YouTube title under 70 characters",
-  "description": "Full YouTube description 300–500 words. Include:\\n\\n📌 What you'll learn:\\n- Point 1\\n- Point 2\\n\\n🔗 Resources:\\n[LINKS]\\n\\n${niche.seo.baseHashtags.join(' ')} #YourRelevantTag1 #YourRelevantTag2",
-  "tags": ["15", "to", "20", "relevant", "tags", "as", "array"],
+  "description": "Full YouTube description 300–500 words. Include:\\n\\n📌 What you'll learn:\\n- Point 1\\n- Point 2\\n\\n🔗 Resources:\\n[LINKS]\\n\\n${niche.seo.baseHashtags.join(' ')} #RelevantTag1 #RelevantTag2",
+  "tags": ["15", "to", "20", "relevant", "tags", "as", "an", "array"],
   "thumbnail_text": "Bold 3–5 word thumbnail headline in ALL CAPS",
   "topic": "The specific topic you chose",
   "category_id": "28",
   "script": {
-    "hook": "Attention-grabbing first sentence or question (spoken text only, ~20 words)",
-    "intro": "Brief intro: who this is for and what they'll learn (~30 words)",
+    "hook": "Attention-grabbing opening sentence (~20 words of spoken text)",
+    "intro": "Brief intro: who this is for and what they will learn (~30 words)",
     "sections": [
       {
         "title": "Section heading",
-        "content": "Spoken script content for this section. Conversational and specific.",
+        "content": "Spoken script for this section. Conversational and specific.",
         "duration_seconds": 30
       }
     ],
@@ -70,53 +151,18 @@ Generate a complete video package. Return ONLY valid JSON matching this structur
 Requirements:
 - Script must be natural spoken language, not bullet points
 - Include specific technical details (commands, API names, file paths where relevant)
-- Make the hook immediately valuable — answer a question or solve a problem
-- Tags should mix broad (#AndroidAI) and specific (#OpenClawSetup) terms`;
-
-  // Use streaming since script generation can produce long output
-  const stream = await client.messages.stream({
-    model: 'claude-opus-4-6',
-    max_tokens: 8000,
-    thinking: { type: 'adaptive' },
-    messages: [{ role: 'user', content: prompt }],
-  });
-
-  const response = await stream.finalMessage();
-
-  // Extract text blocks only (skip thinking blocks)
-  const textContent = response.content
-    .filter(b => b.type === 'text')
-    .map(b => b.text)
-    .join('');
-
-  const jsonMatch = textContent.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) {
-    throw new Error('Claude did not return valid JSON. Raw response:\n' + textContent.slice(0, 500));
-  }
-
-  const content = JSON.parse(jsonMatch[0]);
-
-  // Build flat script text for TTS
-  content.fullScript = buildFullScript(content.script);
-  content.isShort = isShort;
-
-  console.log(`✅ Content generated: "${content.title}"`);
-  console.log(`   Topic: ${content.topic}`);
-  console.log(`   Script length: ~${content.fullScript.split(' ').length} words`);
-
-  return content;
+- Hook must immediately answer a question or solve a problem
+- Tags should mix broad and specific terms`;
 }
 
-/**
- * Flatten the structured script into a single string for TTS.
- */
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
 function buildFullScript(script) {
   if (!script) return '';
-  const parts = [
+  return [
     script.hook,
     script.intro,
     ...(script.sections || []).map(s => s.content),
     script.outro,
-  ].filter(Boolean);
-  return parts.join(' ').replace(/\s+/g, ' ').trim();
+  ].filter(Boolean).join(' ').replace(/\s+/g, ' ').trim();
 }
