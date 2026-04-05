@@ -1,0 +1,39 @@
+{
+  "channel": {
+    "name": "Clawbot AI",
+    "niche": "Mobile AI & Automation",
+    "tagline": "Your guide to AI automation on Android",
+    "language": "en",
+    "defaultCategory": "28",
+    "primaryColor": "#0d1117",
+    "accentColor": "#58a6ff",
+    "uploadSchedule": "0 9 * * *"
+  },
+  "topics": [
+    "Running AI models locally on Android with Termux",
+    "OpenClaw framework setup and automation",
+    "Gemini API integration on mobile devices",
+    "Building AI agents on your phone for free",
+    "Android automation workflows with AI",
+    "Mobile productivity with AI assistants",
+    "Free open-source AI tools for Android",
+    "Connecting AI to messaging apps on Android",
+    "LLM inference on mobile hardware",
+    "No-cloud AI automation with Termux",
+    "OpenClaw dashboard setup and tips",
+    "AI scripting for Android power users",
+    "Running Gemini Pro on a budget phone",
+    "Mobile AI agent frameworks compared"
+  ],
+  "videoStyle": {
+    "format": "educational",
+    "tone": "friendly, practical, and technically accurate",
+    "targetAudience": "Android developers, AI enthusiasts, and mobile power users",
+    "videoDuration": "short",
+    "callToAction": "Subscribe for daily AI automation tips and drop a comment with your questions!"
+  },
+  "seo": {
+    "baseHashtags": ["#AIAutomation", "#AndroidAI", "#MobileAI", "#AITools", "#OpenClaw"],
+    "trendingTopics": ["Gemini", "LLM", "AI Agent", "Android", "Termux", "Automation"]
+  }
+}

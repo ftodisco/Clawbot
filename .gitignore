@@ -1,0 +1,9 @@
+node_modules/
+tmp/
+output/
+.env
+.youtube-credentials.json
+.upload-history.json
+*.mp3
+*.mp4
+*.log

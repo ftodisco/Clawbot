@@ -1,0 +1,26 @@
+{
+  "name": "clawbot-youtube-automation",
+  "version": "1.0.0",
+  "description": "Automated daily YouTube content pipeline powered by Claude AI",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "auth": "node src/auth.js",
+    "schedule": "node src/scheduler.js",
+    "dry-run": "DRY_RUN=true node src/index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0",
+    "googleapis": "^144.0.0",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.4.5",
+    "google-tts-api": "^2.0.2",
+    "axios": "^1.7.9"
+  },
+  "optionalDependencies": {
+    "canvas": "^2.11.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
