@@ -114,7 +114,7 @@ async function checkDependencies() {
   }
 
   try {
-    await execAsync('ffmpeg -version 2>/dev/null');
+    await execAsync('ffmpeg -version', { stdio: 'pipe' }).catch(() => { throw new Error('not found'); });
   } catch {
     throw new Error(
       'ffmpeg is required but not found.\n' +
@@ -126,7 +126,7 @@ async function checkDependencies() {
   }
 
   try {
-    await execAsync('ffprobe -version 2>/dev/null');
+    await execAsync('ffprobe -version', { stdio: 'pipe' }).catch(() => { throw new Error('not found'); });
   } catch {
     throw new Error('ffprobe (part of ffmpeg) is required. Please install ffmpeg.');
   }

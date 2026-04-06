@@ -69,7 +69,7 @@ async function downloadGoogleChunk(text, lang, outputPath, index) {
     } catch (err) {
       if (attempt === maxRetries - 1) {
         console.warn(`   Chunk ${index} failed after ${maxRetries} tries — inserting silence`);
-        await execAsync(`ffmpeg -f lavfi -i anullsrc=r=22050:cl=mono -t 1 -q:a 9 -acodec libmp3lame "${outputPath}" -y 2>/dev/null`);
+        await execAsync(`ffmpeg -f lavfi -i anullsrc=r=22050:cl=mono -t 1 -q:a 9 -acodec libmp3lame "${outputPath}" -y `);
       } else {
         await sleep(1000 * (attempt + 1));
       }
@@ -155,7 +155,7 @@ function splitIntoChunks(text, maxChars) {
 async function mergeAudioFiles(chunkPaths, outputDir, outputPath) {
   const listFile = join(outputDir, 'chunks.txt');
   writeFileSync(listFile, chunkPaths.map(f => `file '${f}'`).join('\n'));
-  await execAsync(`ffmpeg -f concat -safe 0 -i "${listFile}" -acodec copy "${outputPath}" -y 2>/dev/null`);
+  await execAsync(`ffmpeg -f concat -safe 0 -i "${listFile}" -acodec copy "${outputPath}" -y `);
 }
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));

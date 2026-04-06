@@ -133,7 +133,7 @@ async function ffmpegThumbnail(content, outputDir, config) {
   ].join(',');
 
   await execAsync(
-    `ffmpeg -f lavfi -i "${vf}" -vf "${drawFilters}" -frames:v 1 -update 1 "${outputPath}" -y 2>/dev/null`
+    `ffmpeg -f lavfi -i "${vf}" -vf "${drawFilters}" -frames:v 1 -update 1 "${outputPath}" -y `
   );
   console.log(`✅ Thumbnail (ffmpeg): ${outputPath}`);
   return outputPath;
