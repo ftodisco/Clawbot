@@ -71,8 +71,10 @@ export async function runPipeline() {
       if (!existsSync(OUTPUT_DIR)) mkdirSync(OUTPUT_DIR, { recursive: true });
       const outVideo     = join(OUTPUT_DIR, `${runId}_video.mp4`);
       const outThumb     = join(OUTPUT_DIR, `${runId}_thumbnail.png`);
-      await execAsync(`cp "${videoPath}" "${outVideo}"`);
-      await execAsync(`cp "${thumbnailPath}" "${outThumb}"`);
+      const isWindows = process.platform === 'win32';
+      const cpCmd = isWindows ? 'copy' : 'cp';
+      await execAsync(`${cpCmd} "${videoPath}" "${outVideo}"`);
+      await execAsync(`${cpCmd} "${thumbnailPath}" "${outThumb}"`);
 
       result = {
         dryRun: true,
@@ -103,8 +105,12 @@ export async function runPipeline() {
 // ─── Dependency check ─────────────────────────────────────────────────────────
 
 async function checkDependencies() {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    throw new Error('ANTHROPIC_API_KEY is not set. Add it to your .env file.');
+  if (!process.env.OPENROUTER_API_KEY && !process.env.ANTHROPIC_API_KEY) {
+    throw new Error(
+      'No AI API key found. Add one of these to your .env file:\n' +
+      '  OPENROUTER_API_KEY=sk-or-...   (recommended)\n' +
+      '  ANTHROPIC_API_KEY=sk-ant-...   (direct Anthropic)'
+    );
   }
 
   try {
