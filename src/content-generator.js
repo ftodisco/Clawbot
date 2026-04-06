@@ -3,8 +3,10 @@
  * Generates a complete YouTube video package (title, description, tags, script).
  *
  * Provider selection (in priority order):
- *   1. OpenRouter  — set OPENROUTER_API_KEY  (any model via openrouter.ai)
- *   2. Anthropic   — set ANTHROPIC_API_KEY   (direct API, claude-opus-4-6)
+ *   1. OpenRouter  — set OPENROUTER_API_KEY (any model via openrouter.ai)
+ *        OPENROUTER_MODEL          = primary model  (default: google/gemini-3.1-flash-lite-preview)
+ *        OPENROUTER_FALLBACK_MODEL = fallback model (default: qwen/qwen3.5-flash-02-23)
+ *   2. Anthropic   — set ANTHROPIC_API_KEY (direct, claude-opus-4-6)
  */
 
 import { readFileSync } from 'fs';
@@ -14,6 +16,9 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const niche = JSON.parse(readFileSync(join(__dirname, '../config/niche.json'), 'utf-8'));
 
+const PRIMARY_MODEL  = process.env.OPENROUTER_MODEL          || 'google/gemini-3.1-flash-lite-preview';
+const FALLBACK_MODEL = process.env.OPENROUTER_FALLBACK_MODEL || 'qwen/qwen3.5-flash-02-23';
+
 /**
  * Generate a complete YouTube video content package.
  * @param {string[]} previousTitles - Recently used titles to avoid repetition
@@ -21,22 +26,19 @@ const niche = JSON.parse(readFileSync(join(__dirname, '../config/niche.json'), '
  */
 export async function generateContent(previousTitles = []) {
   const useOpenRouter = !!process.env.OPENROUTER_API_KEY;
-  const provider = useOpenRouter ? 'OpenRouter' : 'Anthropic';
-  const model = useOpenRouter
-    ? (process.env.OPENROUTER_MODEL || 'anthropic/claude-opus-4')
-    : 'claude-opus-4-6';
-
-  console.log(`🤖 Generating content via ${provider} (${model})...`);
-
   const prompt = buildPrompt(previousTitles);
 
-  const text = useOpenRouter
-    ? await callOpenRouter(prompt, model)
-    : await callAnthropic(prompt);
+  let text;
+  if (useOpenRouter) {
+    text = await callOpenRouterWithFallback(prompt);
+  } else {
+    console.log('🤖 Generating content via Anthropic (claude-opus-4-6)...');
+    text = await callAnthropic(prompt);
+  }
 
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) {
-    throw new Error(`${provider} did not return valid JSON.\n${text.slice(0, 400)}`);
+    throw new Error(`Model did not return valid JSON.\n${text.slice(0, 400)}`);
   }
 
   const content = JSON.parse(jsonMatch[0]);
@@ -50,7 +52,26 @@ export async function generateContent(previousTitles = []) {
   return content;
 }
 
-// ─── Provider: OpenRouter (OpenAI-compatible) ─────────────────────────────────
+// ─── OpenRouter with primary → fallback ──────────────────────────────────────
+
+async function callOpenRouterWithFallback(prompt) {
+  try {
+    console.log(`🤖 Generating content via OpenRouter (${PRIMARY_MODEL})...`);
+    return await callOpenRouter(prompt, PRIMARY_MODEL);
+  } catch (primaryErr) {
+    console.warn(`⚠️  Primary model failed: ${primaryErr.message}`);
+    console.log(`🔄 Retrying with fallback model (${FALLBACK_MODEL})...`);
+    try {
+      return await callOpenRouter(prompt, FALLBACK_MODEL);
+    } catch (fallbackErr) {
+      throw new Error(
+        `Both models failed.\n` +
+        `  Primary  (${PRIMARY_MODEL}): ${primaryErr.message}\n` +
+        `  Fallback (${FALLBACK_MODEL}): ${fallbackErr.message}`
+      );
+    }
+  }
+}
 
 async function callOpenRouter(prompt, model) {
   const { default: OpenAI } = await import('openai');
@@ -75,14 +96,15 @@ async function callOpenRouter(prompt, model) {
   for await (const chunk of stream) {
     text += chunk.choices[0]?.delta?.content || '';
   }
+
+  if (!text.trim()) throw new Error('Empty response from model');
   return text;
 }
 
-// ─── Provider: Anthropic (direct) ────────────────────────────────────────────
+// ─── Anthropic fallback (direct) ─────────────────────────────────────────────
 
 async function callAnthropic(prompt) {
   const { default: Anthropic } = await import('@anthropic-ai/sdk');
-
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
   const stream = await client.messages.stream({
@@ -93,11 +115,7 @@ async function callAnthropic(prompt) {
   });
 
   const response = await stream.finalMessage();
-
-  return response.content
-    .filter(b => b.type === 'text')
-    .map(b => b.text)
-    .join('');
+  return response.content.filter(b => b.type === 'text').map(b => b.text).join('');
 }
 
 // ─── Prompt builder ───────────────────────────────────────────────────────────
