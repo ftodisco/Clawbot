@@ -64,7 +64,8 @@ console.log('═'.repeat(60) + '\n');
 try {
   mkdirSync(runDir, { recursive: true });
 
-  const audioPath = await generateAudio(content.fullScript, runDir, content.language || 'en');
+  const audioPath     = await generateAudio(content.fullScript, runDir, content.language || 'en');
+  const thumbnailPath = await generateThumbnail(content, runDir, niche);
 
   // Use fal.ai AI video if key is set, otherwise fall back to static thumbnail
   let videoPath;
@@ -74,11 +75,9 @@ try {
       videoPath = await mergeVideoWithAudio(falVideoPath, audioPath, content, runDir);
     } catch (err) {
       console.warn(`⚠️  fal.ai failed (${err.message}) — falling back to thumbnail`);
-      const thumbnailPath = await generateThumbnail(content, runDir, niche);
       videoPath = await createVideo(thumbnailPath, audioPath, content, runDir);
     }
   } else {
-    const thumbnailPath = await generateThumbnail(content, runDir, niche);
     videoPath = await createVideo(thumbnailPath, audioPath, content, runDir);
   }
 
