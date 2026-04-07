@@ -7,7 +7,8 @@
     "start": "node src/index.js",
     "auth": "node src/auth.js",
     "schedule": "node src/scheduler.js",
-    "dry-run": "cross-env DRY_RUN=true node src/index.js"
+    "custom": "node src/custom-run.js",
+    "custom-dry": "cross-env DRY_RUN=true node src/custom-run.js",
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.40.0",

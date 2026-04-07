@@ -1,0 +1,12 @@
+{
+  "title": "Your Video Title Here",
+  "thumbnail_text": "SHORT PUNCH LINE",
+  "topic": "Wedding",
+  "format": "short",
+  "language": "en",
+  "tags": ["wedding", "love", "shorts"],
+  "description": "Your YouTube description here.\n\n#wedding #love #shorts",
+  "category_id": "22",
+
+  "spoken_text": "Paste your full script here as one block of text. Everything in this field will be read aloud by the TTS voice. You can also use the structured script format below instead."
+}
