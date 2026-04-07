@@ -14,10 +14,11 @@ import { fileURLToPath } from 'url';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 
-import { generateAudio }     from './tts.js';
-import { generateThumbnail } from './thumbnail-generator.js';
-import { createVideo }       from './video-creator.js';
-import { uploadVideo }       from './youtube-uploader.js';
+import { generateAudio }        from './tts.js';
+import { generateThumbnail }    from './thumbnail-generator.js';
+import { createVideo, mergeVideoWithAudio } from './video-creator.js';
+import { uploadVideo }          from './youtube-uploader.js';
+import { generateFalVideo }     from './fal-video-generator.js';
 
 const __dirname  = dirname(fileURLToPath(import.meta.url));
 const execAsync  = promisify(exec);
@@ -63,9 +64,23 @@ console.log('═'.repeat(60) + '\n');
 try {
   mkdirSync(runDir, { recursive: true });
 
-  const audioPath     = await generateAudio(content.fullScript, runDir, content.language || 'en');
-  const thumbnailPath = await generateThumbnail(content, runDir, niche);
-  const videoPath     = await createVideo(thumbnailPath, audioPath, content, runDir);
+  const audioPath = await generateAudio(content.fullScript, runDir, content.language || 'en');
+
+  // Use fal.ai AI video if key is set, otherwise fall back to static thumbnail
+  let videoPath;
+  if (process.env.FAL_API_KEY) {
+    try {
+      const falVideoPath = await generateFalVideo(content, runDir);
+      videoPath = await mergeVideoWithAudio(falVideoPath, audioPath, content, runDir);
+    } catch (err) {
+      console.warn(`⚠️  fal.ai failed (${err.message}) — falling back to thumbnail`);
+      const thumbnailPath = await generateThumbnail(content, runDir, niche);
+      videoPath = await createVideo(thumbnailPath, audioPath, content, runDir);
+    }
+  } else {
+    const thumbnailPath = await generateThumbnail(content, runDir, niche);
+    videoPath = await createVideo(thumbnailPath, audioPath, content, runDir);
+  }
 
   if (isDryRun) {
     mkdirSync(OUTPUT_DIR, { recursive: true });

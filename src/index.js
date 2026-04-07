@@ -19,8 +19,9 @@ import { readFileSync } from 'fs';
 import { generateContent }    from './content-generator.js';
 import { generateAudio }      from './tts.js';
 import { generateThumbnail }  from './thumbnail-generator.js';
-import { createVideo }        from './video-creator.js';
+import { createVideo, mergeVideoWithAudio } from './video-creator.js';
 import { uploadVideo, getRecentTitles } from './youtube-uploader.js';
+import { generateFalVideo }   from './fal-video-generator.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const execAsync = promisify(exec);
@@ -58,11 +59,23 @@ export async function runPipeline() {
       niche.channel.language || 'en'
     );
 
-    // ── Step 3: Thumbnail ──────────────────────────────────────────────────
-    const thumbnailPath = await generateThumbnail(content, runDir, niche);
-
-    // ── Step 4: Assemble video ─────────────────────────────────────────────
-    const videoPath = await createVideo(thumbnailPath, audioPath, content, runDir);
+    // ── Step 3 & 4: Generate video (fal.ai AI video or static thumbnail) ───
+    let videoPath;
+    let thumbnailPath;
+    if (process.env.FAL_API_KEY) {
+      try {
+        const falVideoPath = await generateFalVideo(content, runDir);
+        videoPath = await mergeVideoWithAudio(falVideoPath, audioPath, content, runDir);
+        thumbnailPath = await generateThumbnail(content, runDir, niche); // still needed for YouTube thumbnail
+      } catch (err) {
+        console.warn(`⚠️  fal.ai failed (${err.message}) — falling back to thumbnail`);
+        thumbnailPath = await generateThumbnail(content, runDir, niche);
+        videoPath = await createVideo(thumbnailPath, audioPath, content, runDir);
+      }
+    } else {
+      thumbnailPath = await generateThumbnail(content, runDir, niche);
+      videoPath = await createVideo(thumbnailPath, audioPath, content, runDir);
+    }
 
     // ── Step 5: Upload to YouTube (skip in dry-run mode) ───────────────────
     let result;

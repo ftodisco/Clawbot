@@ -23,6 +23,38 @@ const execAsync = promisify(exec);
  * @param {string} outputDir
  * @returns {Promise<string>} Path to the output video.mp4
  */
+/**
+ * Merge a fal.ai-generated video clip with TTS audio.
+ * Loops the clip if it is shorter than the audio.
+ */
+export async function mergeVideoWithAudio(falVideoPath, audioPath, content, outputDir) {
+  console.log('🎞️  Merging AI video with voiceover...');
+  if (!existsSync(outputDir)) mkdirSync(outputDir, { recursive: true });
+
+  const outputPath  = join(outputDir, 'video.mp4');
+  const duration    = await getAudioDuration(audioPath);
+  const videoDur    = content.isShort ? Math.min(duration, 59) : duration;
+
+  console.log(`   Audio: ${duration.toFixed(1)}s | Format: ${content.isShort ? 'Shorts (9:16)' : 'Regular (16:9)'}`);
+
+  const cmd = [
+    'ffmpeg',
+    `-stream_loop -1 -i "${falVideoPath}"`,
+    `-i "${audioPath}"`,
+    `-t ${videoDur}`,
+    `-map 0:v -map 1:a`,
+    `-c:v libx264 -preset fast -crf 23`,
+    `-c:a aac -b:a 128k`,
+    `-pix_fmt yuv420p`,
+    `-movflags +faststart`,
+    `"${outputPath}" -y`,
+  ].join(' ');
+
+  await execAsync(cmd, { maxBuffer: 50 * 1024 * 1024 });
+  console.log(`✅ Video created: ${outputPath}`);
+  return outputPath;
+}
+
 export async function createVideo(thumbnailPath, audioPath, content, outputDir) {
   console.log('🎬 Creating video with ffmpeg...');
   if (!existsSync(outputDir)) mkdirSync(outputDir, { recursive: true });
