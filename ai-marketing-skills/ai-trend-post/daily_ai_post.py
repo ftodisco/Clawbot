@@ -176,7 +176,7 @@ TRENDING AI NEWS:
 Write a social media post about the most interesting AI story or theme from these headlines.
 
 RULES:
-- Total length: between 950 and 1050 characters (count carefully)
+- Total length: EXACTLY between 950 and 1050 characters — this is a hard limit
 - Direct, punchy tone — short sentences, no filler
 - Include one specific fact, stat, or development from the news
 - No corporate speak. No "I'm excited to share." No "game-changing."
@@ -184,7 +184,30 @@ RULES:
 - Do not use emojis
 - No intro line like "Here's your post:" — return ONLY the post text
 
-Count the characters before returning. Adjust until you are in the 950-1050 range."""
+IMPORTANT: After writing, count every character. If the count is not between 950-1050, cut or expand until it is. A post that is too long fails."""
+
+    message = client.messages.create(
+        model=MODEL_ID,
+        max_tokens=600,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    post = message.content[0].text.strip()
+
+    # Auto-trim if over limit — preserve hashtags at the end
+    if len(post) > 1050:
+        post = _trim_post(post, client)
+
+    return post
+
+
+def _trim_post(post: str, client) -> str:
+    """Ask Claude to shorten the post to fit the 950-1050 char target."""
+    prompt = f"""This social media post is {len(post)} characters. Shorten it to between 950 and 1050 characters.
+
+Keep the 5 hashtags at the end unchanged. Cut from the body — remove full sentences, not mid-sentence. Return ONLY the trimmed post.
+
+POST:
+{post}"""
 
     message = client.messages.create(
         model=MODEL_ID,
