@@ -1,0 +1,9 @@
+# Core — required
+anthropic>=0.39.0
+
+# Image generation — optional (DALL-E 3)
+# openai>=1.30.0
+
+# Live news search — optional (falls back to RSS if absent)
+# Install if you have a Tavily API key:
+# pip install tavily-python
