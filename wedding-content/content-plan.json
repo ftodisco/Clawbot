@@ -1,0 +1,345 @@
+{
+  "niche": "Wedding Content Creator",
+  "plan_duration": "30 days",
+  "generated_date": "2026-05-10",
+  "platforms": ["Instagram", "TikTok", "Pinterest"],
+  "formats_key": {
+    "Reel": "Short vertical video 15-60s, hook in first 3s",
+    "Carousel": "Swipeable image/text slides, 5-10 slides",
+    "Static": "Single image or graphic post",
+    "Stories": "Ephemeral 24h content — polls, Q&A, links",
+    "TikTok": "Trending audio, text overlay, storytelling video"
+  },
+  "weeks": [
+    {
+      "week": 1,
+      "theme": "Just Engaged — The First Steps",
+      "days": [
+        {
+          "day": 1,
+          "topic": "What to Do First After Getting Engaged",
+          "hook": "Stop. Before you book ANYTHING — do these 5 things.",
+          "format": "Reel",
+          "caption": "Everyone told me to 'enjoy the moment' after getting engaged — and they were right. But before the planning spiral starts, there are 5 things you should do FIRST that'll save you months of stress. Watch this before you open a single vendor website. 💍\n\n1. Tell your people before it's online\n2. Take engagement photos ASAP\n3. Set a rough budget range before venues\n4. Agree on a guest count ballpark\n5. Give yourself 2-4 weeks before booking anything\n\nWhich step surprised you most? Drop it below! 👇",
+          "hashtags": ["#JustEngaged", "#WeddingPlanning", "#NewlyEngaged", "#WeddingTips", "#EngagedCouple", "#WeddingAdvice", "#BrideToBe", "#WeddingContentCreator"],
+          "content_tip": "Film yourself talking to camera, overlay bullet points as text. Use trending 'announcement' audio.",
+          "image_prompt": "A close-up of a freshly engaged woman's hand with a diamond ring, warm golden hour light, soft bokeh background, joyful and romantic atmosphere, editorial wedding photography style"
+        },
+        {
+          "day": 2,
+          "topic": "The Real Wedding Planning Timeline",
+          "hook": "Venues book 18 months out. Photographers 12. Are you already behind?",
+          "format": "Carousel",
+          "caption": "The wedding industry has a dirty little secret: if you don't start booking KEY vendors within months of your engagement, your dream date is gone. 📅\n\nSwipe through the exact timeline I recommend — built from planning 50+ weddings.\n\nThe biggest mistake couples make? Waiting until they 'feel ready.' Save this now and come back to it. 🔖",
+          "hashtags": ["#WeddingTimeline", "#WeddingPlanning", "#WeddingChecklist", "#WeddingTips", "#PlanningAWedding", "#WeddingAdvice", "#BridalPlanning"],
+          "content_tip": "Create 8 slides: cover, 18mo, 12mo, 9mo, 6mo, 3mo, 1mo, day-of. Clean minimal design. Very saveable.",
+          "image_prompt": "A flat lay of a wedding planning notebook, calendar, pen and coffee cup on a marble desk, soft morning light, minimal and elegant styling, lifestyle photography"
+        },
+        {
+          "day": 3,
+          "topic": "Things I Wish I Knew Before Planning My Wedding",
+          "hook": "I cried in 3 different venues and wasted $500 before I learned this.",
+          "format": "TikTok",
+          "caption": "Storytime: here's everything I wish someone had told me before we started planning. Some of it is embarrassing, all of it is useful. 😭✨\n\nSave this for when you need a reality check — and drop your biggest planning regret below. You're not alone! 💛",
+          "hashtags": ["#WeddingStory", "#WeddingMistakes", "#WeddingAdvice", "#BrideToBe", "#WeddingPlanning", "#HonestWedding", "#WeddingReality"],
+          "content_tip": "Raw, talking-head style video. Vulnerability builds trust and shares massively. Keep it under 60s.",
+          "image_prompt": "A bride sitting on venue steps looking thoughtfully at a notebook, candid and editorial, warm natural light, honest and real atmosphere, film photography aesthetic"
+        },
+        {
+          "day": 4,
+          "topic": "How to Build a Realistic Wedding Budget",
+          "hook": "The average wedding costs $30k. Here's how to know YOUR number.",
+          "format": "Carousel",
+          "caption": "Budget talk isn't sexy — but it IS what determines everything else about your wedding. 💸\n\nSwipe through my breakdown of where wedding money ACTUALLY goes, including the hidden costs most blogs won't tell you about.\n\nThe formula: decide your total first, then build your vendor list around it. Not the other way around. 📊\n\nDrop your current budget range below — no judgment, just community. 👇",
+          "hashtags": ["#WeddingBudget", "#WeddingCosts", "#WeddingMoney", "#WeddingPlanning", "#BudgetBride", "#WeddingFinances", "#WeddingTips"],
+          "content_tip": "Include a real budget pie chart in slide 3. Use actual percentages: venue 30%, catering 25%, photo 12%, etc.",
+          "image_prompt": "A clean infographic-style flat lay with budget categories written on paper cards spread on a marble surface, calculator and pen nearby, bright natural light, minimal and professional styling"
+        },
+        {
+          "day": 5,
+          "topic": "The Ultimate Wedding Planning Checklist",
+          "hook": "I've condensed 18 months of wedding planning into one swipeable checklist.",
+          "format": "Carousel",
+          "caption": "This took me years to perfect — and it's yours for free. 📋\n\nEvery task, every milestone, organized by timeline so nothing falls through the cracks. Swipe through and save it immediately.\n\nBiggest fear of wedding planning? Drop it below — I'll make sure it's on the checklist. 👇",
+          "hashtags": ["#WeddingChecklist", "#WeddingPlanning", "#WeddingOrganization", "#BridePlanning", "#WeddingTips", "#WeddingAdvice", "#PlanningAWedding"],
+          "content_tip": "High-save content. Make it beautifully designed with a CTA to save. Follow-up with a link to a free download.",
+          "image_prompt": "An elegant checklist on cream paper with items checked off using a gold pen, surrounded by soft floral accents, editorial flat lay photography, warm and sophisticated styling"
+        },
+        {
+          "day": 6,
+          "topic": "How to Choose Your Wedding Date",
+          "hook": "Your dream date might already be taken — and not by another couple.",
+          "format": "Reel",
+          "caption": "Picking a wedding date feels simple — it's not. 📅\n\n3 things that kill a 'perfect' wedding date that no one tells you:\n→ Holiday weekend = travel chaos for guests\n→ School calendars affect family attendance\n→ Peak season = 30-40% higher vendor prices\n\nHere's how to find a date that works for everyone AND your budget. Sharing this with your partner right now? Tag them! 💍",
+          "hashtags": ["#WeddingDate", "#WeddingPlanning", "#WeddingTips", "#ChoosingAWeddingDate", "#WeddingAdvice", "#WeddingSeason", "#BridalTips"],
+          "content_tip": "Short punchy Reel. Use calendar B-roll footage with voice-over. Relatable and highly shareable.",
+          "image_prompt": "A close-up of a beautifully styled desk calendar with a heart drawn around a date, wedding rings beside it, soft window light, romantic and intimate flat lay styling"
+        },
+        {
+          "day": 7,
+          "topic": "Guest List Strategy That Saves Money and Stress",
+          "hook": "Every person you add to your guest list costs you $150-$250. Do the math.",
+          "format": "Reel",
+          "caption": "Nobody wants to be the couple cutting names — but the guest list IS the budget. 💔\n\nHere's the framework we use with every couple:\n\n1. Start with your 'anytime list' (immediate family + closest friends)\n2. Add your 'maybe list' and sit on it for a week\n3. Apply the '2-year rule' — seen them in the last 2 years?\n\nThis approach alone helped one couple cut 40 guests and save $6k. 🙌\n\nDrop your biggest guest list challenge below. We've seen it all. 👇",
+          "hashtags": ["#WeddingGuestList", "#WeddingBudget", "#WeddingPlanning", "#WeddingTips", "#GuestList", "#WeddingAdvice", "#SmallWedding"],
+          "content_tip": "Pair with relatable meme in Stories. High engagement topic — people ALWAYS have opinions on guest lists.",
+          "image_prompt": "A hand writing names on a list with some crossed out, wedding planning notebook open, warm lighting, candid and authentic lifestyle wedding planning photography"
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "theme": "Styling Your Vision",
+      "days": [
+        {
+          "day": 8,
+          "topic": "Biggest Wedding Trends Right Now",
+          "hook": "The wedding trends taking over in 2026 — and which ones to skip.",
+          "format": "Carousel",
+          "caption": "Wedding trends move FAST — and some of them will feel dated in 3 years. So I'm doing the honest breakdown: what's genuinely stunning, what's peaking, and what to avoid. 🌿✨\n\nSwipe through my hot takes — and tell me which trend you're obsessed with in the comments. 👇",
+          "hashtags": ["#WeddingTrends", "#WeddingAesthetic", "#2026Weddings", "#WeddingInspo", "#WeddingStyle", "#ModernWedding", "#WeddingInspiration"],
+          "content_tip": "Use high-quality editorial images or your own shoots. Trend content gets massive reach when published early.",
+          "image_prompt": "A stunning modern wedding reception with warm candlelight, organic florals, linen tablecloths and terracotta tones, editorial wedding photography, golden hour light through windows"
+        },
+        {
+          "day": 9,
+          "topic": "How to Build Your Wedding Color Palette",
+          "hook": "Your wedding colors affect your flowers, your photos, AND your dress choices. Here's how to get it right.",
+          "format": "Carousel",
+          "caption": "Picking wedding colors is more strategic than people think — because every vendor decision flows from it. 🎨\n\nSwipe through my step-by-step process for choosing a palette that photographs beautifully and stays cohesive across every element.\n\nBonus: I'm sharing my 5 favorite palette combinations for 2026 weddings. Save this one! 🔖",
+          "hashtags": ["#WeddingColors", "#WeddingColorPalette", "#WeddingStyle", "#WeddingAesthetic", "#ColorPalette", "#WeddingInspo", "#WeddingDecor"],
+          "content_tip": "Include actual Pantone/hex color swatches in slides. These get saved constantly — great for Pinterest too.",
+          "image_prompt": "A beautifully arranged wedding color palette mood board flat lay with fabric swatches, florals, ribbon, paper samples in sage green, dusty rose and warm ivory, editorial styling"
+        },
+        {
+          "day": 10,
+          "topic": "Wedding Dress Shopping Tips",
+          "hook": "I've been inside 200+ bridal appointments. Here's what the consultants won't tell you.",
+          "format": "TikTok",
+          "caption": "Bridal consultants are wonderful — but they work on commission. Here's what to know BEFORE your first appointment so you're in control of your yes moment. 👗✨\n\n→ Bring max 3 people (opinions kill decisions)\n→ Have a hard budget before you walk in\n→ Try styles outside your 'vision' first\n→ Photos only after you love it\n→ Know the lead time (4-6 months minimum)\n\nFirst appointment coming up? Drop a 💍 and I'll send you my full prep guide!",
+          "hashtags": ["#WeddingDress", "#BridalShopping", "#WeddingGown", "#BrideStyle", "#DressShopping", "#WeddingFashion", "#BridalTips"],
+          "content_tip": "POV-style: 'Things no one tells you about dress shopping.' Walking through a bridal boutique B-roll works perfectly.",
+          "image_prompt": "A bride in a stunning white gown standing in front of a large bridal boutique mirror, soft diffused natural light, elegant and emotional moment, fine art wedding photography style"
+        },
+        {
+          "day": 11,
+          "topic": "DIY Wedding Centerpieces Under $50",
+          "hook": "Florists quoted me $800 per table. I did it for $42. Here's how.",
+          "format": "Reel",
+          "caption": "Not everyone has a $15k floral budget — and that's perfectly okay. ✂️🌿\n\nI'm showing you exactly how I built stunning DIY centerpieces for under $50 per table using grocery store flowers, budget vases, and a few strategic splurges.\n\nYou'll need:\n→ Trader Joe's / Costco seasonal blooms\n→ Simple clear cylinder vases\n→ Eucalyptus or greenery filler\n→ Candles for depth\n\nSave this for your planning folder and tag a bride who needs to see this! 💛",
+          "hashtags": ["#DIYWedding", "#WeddingCenterpieces", "#BudgetWedding", "#DIYBride", "#WeddingFlowers", "#WeddingDecor", "#BudgetBride"],
+          "content_tip": "Time-lapse of building the centerpiece is extremely watchable. Show the cost breakdown on screen.",
+          "image_prompt": "A beautiful DIY wedding centerpiece with white roses, eucalyptus and candles in a clear vase on a round table with linen tablecloth, warm candlelight atmosphere, elegant and achievable styling"
+        },
+        {
+          "day": 12,
+          "topic": "Venue Transformation Before & After",
+          "hook": "This empty room cost $3,000. Watch what we turned it into.",
+          "format": "Reel",
+          "caption": "There's nothing more satisfying than an empty venue walkthrough at 7am and the finished reception at 6pm. 🪄✨\n\nThis transformation used a $12k total decor budget to fill a 200-person ballroom.\n\nWhat do you think? Comment your favorite detail below! 👇",
+          "hashtags": ["#WeddingTransformation", "#WeddingDecor", "#VenueDecor", "#WeddingSetup", "#WeddingVenue", "#WeddingReception", "#WeddingBehindTheScenes"],
+          "content_tip": "Before/after content performs extremely well. Film empty venue at setup, then finished look. Add trending audio.",
+          "image_prompt": "Split image showing an empty elegant ballroom on the left and the same space transformed into a stunning candlelit wedding reception on the right, dramatic before-and-after composition"
+        },
+        {
+          "day": 13,
+          "topic": "Bridal Party Looks That Actually Work Together",
+          "hook": "Mismatched bridesmaid dresses look beautiful — if you follow these rules.",
+          "format": "Carousel",
+          "caption": "The mismatched bridesmaid trend is everywhere — but pulling it off without looking chaotic requires some ground rules. 👗\n\nSwipe through my guide to mix-and-match done RIGHT, including:\n→ How to anchor with one color family\n→ Fabric consistency rules\n→ Length coordination tips\n→ What to do when bridesmaids have different body types\n\nShowing this to your girls? Tag them! 👯‍♀️",
+          "hashtags": ["#BridesmaidsStyle", "#MixAndMatchBridesmaids", "#BridalParty", "#BridesmaidDresses", "#WeddingStyle", "#WeddingFashion", "#BridalInspo"],
+          "content_tip": "Use real wedding photos where possible. Carousel format gets saves and shares from bridesmaids themselves.",
+          "image_prompt": "A group of bridesmaids in complementary shades of sage green mismatched dresses laughing together in soft natural light, candid and joyful editorial wedding photography"
+        },
+        {
+          "day": 14,
+          "topic": "Wedding Florals That Don't Break the Budget",
+          "hook": "Your florist wants 20% of your budget. Here's how to spend less and still look stunning.",
+          "format": "Carousel",
+          "caption": "Florals are one of the highest areas of wedding overspend — but they're also incredibly scalable if you know the rules. 🌸\n\nSwipe for my breakdown of:\n→ Where to spend on florals (ceremony arch = yes)\n→ Where to save (guest table centerpieces = DIY-able)\n→ The $500 bouquet that looks like $2,000\n→ Which flowers are always in season (= cheaper)\n\nPin this for your florist consultation! 📌",
+          "hashtags": ["#WeddingFlowers", "#WeddingFlorals", "#BridalBouquet", "#WeddingFlowerIdeas", "#BudgetWedding", "#WeddingDecor", "#FloralDesign"],
+          "content_tip": "Include a graphic showing 'spend here vs. save here' chart. Highly shareable among budget-conscious brides.",
+          "image_prompt": "A lush, romantic bridal bouquet of white garden roses, peonies, and eucalyptus held against a cream lace wedding gown, soft natural light, fine art editorial wedding photography"
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "theme": "Vendors & Budget Mastery",
+      "days": [
+        {
+          "day": 15,
+          "topic": "How to Find and Vet Wedding Vendors",
+          "hook": "One bad vendor can ruin your wedding day. Here's how to never book the wrong one.",
+          "format": "Carousel",
+          "caption": "Vendor vetting is a skill — and most couples don't learn it until after they've made an expensive mistake. 😬\n\nSwipe for my complete vetting checklist:\n→ Google reviews vs. wedding platform reviews\n→ Questions to ask on the first call\n→ Red flags in the contract\n→ What a professional contract looks like\n→ How to check availability without committing\n\nSave this before your next vendor inquiry! 🔖",
+          "hashtags": ["#WeddingVendors", "#WeddingPlanning", "#HowToFindVendors", "#WeddingTips", "#VendorAdvice", "#WeddingAdvice", "#PlanningAWedding"],
+          "content_tip": "Very high-save content. Add a call to action to share with an engaged friend.",
+          "image_prompt": "A couple sitting across from a wedding vendor at a consultation table reviewing a portfolio together, professional and warm setting, candid lifestyle photography"
+        },
+        {
+          "day": 16,
+          "topic": "Questions to Ask Your Wedding Photographer",
+          "hook": "Most couples ask ONE thing when booking a photographer. It's not the right question.",
+          "format": "Carousel",
+          "caption": "Your photographer will be with you for 8-10 hours on the most important day of your life. You should probably ask more than 'what's your price.' 📸\n\nSwipe for the 15 questions every couple should ask before signing — including two that will immediately reveal if a photographer is worth booking.\n\nScreenshot slide 4 before your next consultation.",
+          "hashtags": ["#WeddingPhotography", "#WeddingPhotographer", "#WeddingPhotographyTips", "#ChoosingAPhotographer", "#WeddingTips", "#BridalAdvice", "#WeddingPlanning"],
+          "content_tip": "Create a clean 'screenshot-worthy' questions list slide. These carousels are shared by photographers AND couples.",
+          "image_prompt": "A wedding photographer capturing a candid moment between bride and groom in golden hour light, bokeh background, photojournalistic wedding photography style, warm and romantic"
+        },
+        {
+          "day": 17,
+          "topic": "How We Saved $3,000 on Wedding Catering",
+          "hook": "The caterer quoted us $18,000. We paid $15,000. Here's every tactic we used.",
+          "format": "TikTok",
+          "caption": "Catering is typically 25-30% of your entire wedding budget — which means it's also where you have the most negotiating room. 🍽️\n\nHere are the 5 tactics we used:\n1. Chose cocktail hour food over a full sit-down dinner\n2. Reduced entrée choices from 3 to 2\n3. Cut the cake cutting fee (baked our own)\n4. Negotiated by booking in the off-season\n5. Asked what the price would be with our own alcohol\n\nWhich one surprised you most? 👇",
+          "hashtags": ["#WeddingCatering", "#WeddingBudget", "#WeddingFood", "#BudgetWedding", "#WeddingTips", "#WeddingCosts", "#SaveOnWedding"],
+          "content_tip": "Personal finance/savings content performs extremely well. Show actual numbers — people share real specifics.",
+          "image_prompt": "An elegant wedding catering spread on a buffet table with cocktail hour appetizers, soft candlelight and floral accents, editorial event photography, warm and inviting atmosphere"
+        },
+        {
+          "day": 18,
+          "topic": "Wedding DJ vs Live Band — The Real Comparison",
+          "hook": "I've done both. The answer is NOT what most planners will tell you.",
+          "format": "Reel",
+          "caption": "The DJ vs live band debate comes up at every single wedding consultation. After being inside hundreds of receptions, here's my honest take. 🎶\n\n✅ DJ: More variety, lower cost ($1-3k), takes requests, better for modern pop\n✅ Band: Unmatched energy, visual experience, better for older crowds ($5-15k)\n\nThe real question isn't which is better — it's which is better FOR YOUR CROWD.\n\nDM me 'MUSIC' and I'll send you my questionnaire to help you decide! 🎵",
+          "hashtags": ["#WeddingDJ", "#WeddingBand", "#WeddingMusic", "#WeddingReception", "#WeddingEntertainment", "#WeddingTips", "#ReceptionMusic"],
+          "content_tip": "Opinion content drives engagement. Take a clear stance and invite debate. Use music clips in background.",
+          "image_prompt": "Side by side split image: left shows a professional wedding DJ setup with dancing guests in colorful lights, right shows a live wedding band performing on a stage at a glamorous reception"
+        },
+        {
+          "day": 19,
+          "topic": "Hidden Wedding Costs No One Warns You About",
+          "hook": "We budgeted $25k. We spent $31k. Here's every surprise cost that hit us.",
+          "format": "Carousel",
+          "caption": "The wedding industry is FULL of costs that only appear after you've already committed. 😬💸\n\nSwipe for the complete list of hidden costs compiled from 50+ real couples:\n→ Vendor gratuity ($500-$1,500)\n→ Dress alterations ($300-$800)\n→ Venue cleaning fee (often buried in contract)\n→ Cake cutting fee ($2-5 per slice)\n→ Overtime charges\n→ Valet and parking\n→ Postage for invitations (they're HEAVY)\n\nAdd 15-20% buffer to every budget. Always. Save and share! 🔖",
+          "hashtags": ["#WeddingCosts", "#HiddenWeddingCosts", "#WeddingBudget", "#WeddingPlanning", "#WeddingMoney", "#BudgetWedding", "#WeddingTips"],
+          "content_tip": "Shock-value hook gets clicks. This is one of the highest-save post types in the wedding niche. Be specific with numbers.",
+          "image_prompt": "A surprised bride looking at a stack of wedding invoices and bills on a desk, candid and slightly humorous tone, warm natural light, relatable and authentic lifestyle photography"
+        },
+        {
+          "day": 20,
+          "topic": "How to Read a Wedding Contract",
+          "hook": "You signed it without reading it. Here are the 6 clauses that could cost you.",
+          "format": "Carousel",
+          "caption": "A vendor contract is the only thing protecting you if something goes wrong. Most couples sign them in 5 minutes. Don't. 📄\n\nSwipe for the 6 clauses every couple needs to check:\n1. Cancellation & refund policy\n2. Substitution clause (especially for photographers)\n3. Overtime and additional fees\n4. Force majeure wording\n5. Exclusivity requirements\n6. Payment schedule\n\nSave this before your next signing — and forward it to anyone in the middle of booking vendors! 📤",
+          "hashtags": ["#WeddingContract", "#WeddingLegal", "#WeddingPlanning", "#VendorContracts", "#WeddingAdvice", "#WeddingTips", "#BridalAdvice"],
+          "content_tip": "This type of 'protect yourself' content builds massive trust. Lawyers and planners share it. Very high-save.",
+          "image_prompt": "A close-up of a hand holding a pen reviewing a formal contract document on a wooden desk, professional and serious tone, clean natural light, editorial business photography style"
+        },
+        {
+          "day": 21,
+          "topic": "Vendor Red Flags Every Couple Must Know",
+          "hook": "They had 5-star reviews and still ruined the wedding. Here's how to spot it early.",
+          "format": "TikTok",
+          "caption": "I've seen vendors with perfect online reviews completely drop the ball on the day. The red flags are almost always there before you book — you just need to know what to look for. 🚩\n\nTop red flags:\n→ Won't provide a written contract\n→ Asks for full payment upfront\n→ Slow to respond before booking (it gets worse after)\n→ Vague about what's included\n→ No backup plan if they get sick\n→ Reviews mention 'communication issues'\n\nHave a bad vendor story? Drop it in the comments. 👇",
+          "hashtags": ["#WeddingVendors", "#WeddingRedFlags", "#WeddingWarning", "#WeddingAdvice", "#WeddingPlanning", "#VendorTips", "#BridalTips"],
+          "content_tip": "Story format with 'I've seen this happen' framing. High comment engagement from people sharing their own experiences.",
+          "image_prompt": "A frustrated bride on the phone during a wedding, candid and dramatic, soft blurred wedding venue background, photojournalistic style, authentic storytelling photography"
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "theme": "Day-Of Details & After",
+      "days": [
+        {
+          "day": 22,
+          "topic": "Building the Perfect Wedding Day Timeline",
+          "hook": "Your wedding day has 16 hours. Here's the minute-by-minute blueprint.",
+          "format": "Carousel",
+          "caption": "A wedding timeline isn't just a schedule — it's what keeps everything from falling apart. ⏱️\n\nSwipe for the full day-of breakdown, including:\n→ Getting-ready buffer time (always 30 min extra)\n→ First look logistics\n→ Cocktail hour pacing\n→ Golden hour photo window (don't miss it!)\n→ Reception flow\n→ End-of-night logistics\n\nSave and send to your planner or day-of coordinator immediately. 🔖",
+          "hashtags": ["#WeddingTimeline", "#WeddingDayOf", "#WeddingDaySchedule", "#WeddingPlanning", "#WeddingDay", "#WeddingCoordinator", "#DayOfCoordination"],
+          "content_tip": "Make this a save-worthy graphic. One slide per time block. Clean, professional design. Planners share this.",
+          "image_prompt": "A beautiful flat lay of a detailed wedding day schedule on elegant paper with a gold pen, alongside wedding details like rings, flowers, and invitation suite, editorial styling"
+        },
+        {
+          "day": 23,
+          "topic": "The Wedding Morning Routine for Brides",
+          "hook": "The first 2 hours of your wedding morning determine the energy of the whole day.",
+          "format": "Reel",
+          "caption": "I've seen chaotic wedding mornings derail entire days. And I've seen perfectly paced ones set the most beautiful tone. The difference is almost always a plan. ✨\n\nHere's what the calmest, most put-together brides do on the morning of:\n→ Wake up 6am (even if HMU starts at 8)\n→ Eat a real breakfast (non-negotiable)\n→ Get hair done BEFORE makeup\n→ Keep the room to immediate family only\n→ Assign someone as the point of contact\n→ No checking vendor emails after 8am\n\nSave this and revisit the week before your wedding! 💛",
+          "hashtags": ["#WeddingMorning", "#BridalMorning", "#WeddingDay", "#BrideGettingReady", "#WeddingTips", "#WeddingAdvice", "#MorningOfWedding"],
+          "content_tip": "Behind-the-scenes morning footage is irresistible. Combine with voice-over tips. Emotional and practical.",
+          "image_prompt": "A bride in a silk robe sitting in soft morning window light getting hair done, champagne flute on the vanity, flowers and bridal accessories nearby, candid and intimate fine art photography"
+        },
+        {
+          "day": 24,
+          "topic": "Things That Go Wrong at Weddings (And How to Handle Them)",
+          "hook": "It rained on the outdoor ceremony. The cake was the wrong flavor. The DJ showed up late. Here's what happened next.",
+          "format": "TikTok",
+          "caption": "Every single wedding has at least one thing that goes 'wrong.' The couples who have the best days are the ones who've decided in advance that it won't matter. 💛\n\nReal stories from real weddings — and how they handled each one with grace.\n\nDrop your wedding 'disaster' story in the comments. I promise it's funnier now than it was then. 😂👇",
+          "hashtags": ["#WeddingFails", "#WeddingStories", "#WeddingAdvice", "#WeddingDay", "#RealWedding", "#WeddingHumor", "#BrideToBe"],
+          "content_tip": "Story format with humor. This performs extremely well — vulnerability + humor = massive shares.",
+          "image_prompt": "A bride and groom laughing genuinely during an unexpected moment at their outdoor wedding, rain beginning to fall, pure joy and connection, candid photojournalistic wedding photography"
+        },
+        {
+          "day": 25,
+          "topic": "First Dance Songs That Aren't Overplayed",
+          "hook": "Please, no more 'Perfect' by Ed Sheeran. Here are 20 first dance songs you haven't heard at every wedding.",
+          "format": "Carousel",
+          "caption": "Your first dance is one of the most-remembered moments of your reception. Pick a song that's actually YOURS. 🎵\n\nSwipe for 20 first dance song recommendations organized by vibe:\n→ Romantic & Timeless\n→ Upbeat & Fun\n→ Indie & Alternative\n→ Country\n→ R&B & Soul\n\nDrop your first dance song pick in the comments — I'd love to add it to the list! 🎶",
+          "hashtags": ["#FirstDanceSong", "#WeddingMusic", "#FirstDance", "#WeddingReception", "#WeddingSong", "#WeddingPlaylist", "#WeddingDance"],
+          "content_tip": "Music content gets shares from couples tagging their partners. Include Spotify playlist link in bio. High engagement.",
+          "image_prompt": "A couple sharing their first dance in a beautifully lit ballroom, twinkle lights above, guests watching from the sides, golden warm light, romantic and cinematic wedding photography"
+        },
+        {
+          "day": 26,
+          "topic": "How to Write Your Own Wedding Vows",
+          "hook": "'I promise to always find the TV remote' isn't a vow. Here's how to write something real.",
+          "format": "Carousel",
+          "caption": "Writing your own vows is one of the most intimate parts of your wedding — and the most terrifying for people who aren't writers. ✍️\n\nSwipe for my complete vow-writing framework:\n→ The structure every good vow follows\n→ Prompts to get you started\n→ How long vows should be (90-120 seconds)\n→ What to avoid (clichés, inside jokes no one gets)\n→ How to practice without crying every time\n\nSave and share with your partner! 💍",
+          "hashtags": ["#WeddingVows", "#PersonalizedVows", "#WeddingCeremony", "#VowWriting", "#WeddingTips", "#WeddingAdvice", "#WeddingCeremonyIdeas"],
+          "content_tip": "Emotional topic — include a real vow excerpt as an example in one slide. Partners tag each other constantly on this.",
+          "image_prompt": "A groom reading handwritten vows from a small card, tearful bride across from him, intimate outdoor ceremony setting, golden light, emotional and cinematic fine art photography"
+        },
+        {
+          "day": 27,
+          "topic": "Real Wedding Recap — Behind the Scenes",
+          "hook": "Here's everything that happened from 6am to midnight at a real wedding.",
+          "format": "Reel",
+          "caption": "Day-in-the-life at a real wedding — no filters, no highlights reel, just the honest beautiful chaos of it. 🎬✨\n\nFrom first look to last dance — follow along and see what a full wedding day actually feels like.\n\nTag the couple who needs to see what their day will feel like! 💍",
+          "hashtags": ["#RealWedding", "#WeddingDayOf", "#WeddingBehindTheScenes", "#WeddingVideo", "#WeddingDay", "#WeddingStory", "#WeddingContent"],
+          "content_tip": "Raw behind-the-scenes content out-performs polished content. Morning-to-night structure. Use real names with permission.",
+          "image_prompt": "A cinematic collage of a full wedding day: morning getting ready, ceremony kiss, reception dancing, couple's last look at sunset, editorial and photojournalistic style, warm golden tones"
+        },
+        {
+          "day": 28,
+          "topic": "What to Do With Your Wedding Dress After the Wedding",
+          "hook": "You spent $2,000 on it. Now it's in a bag in your closet. Here are 5 better options.",
+          "format": "Carousel",
+          "caption": "The wedding dress question nobody plans for: what do you actually DO with it after? 👗\n\nSwipe for 5 meaningful options:\n1. Preserve it professionally\n2. Trash the dress (hear me out — it's incredible)\n3. Donate to Brides Across America or similar\n4. Repurpose it (into a Communion dress, art, or jewelry)\n5. Sell it on Stillwhite or PreOwnedWeddingDresses\n\nWhat did you do (or plan to do) with yours? Tell me below! 💬",
+          "hashtags": ["#WeddingDress", "#WeddingGown", "#AfterTheWedding", "#PreserveYourDress", "#TrashTheDress", "#WeddingDressTips", "#PostWedding"],
+          "content_tip": "Post-wedding content brings in a different audience. Very shareable by newlyweds and recent brides.",
+          "image_prompt": "A beautifully preserved wedding gown hanging in a window with warm natural light, elegant and nostalgic atmosphere, fine art wedding photography style"
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "theme": "Creator Growth & Community",
+      "days": [
+        {
+          "day": 29,
+          "topic": "How I Grew My Wedding Account to [X]k Followers",
+          "hook": "I posted for 8 months with no growth. Then I changed one thing.",
+          "format": "TikTok",
+          "caption": "Transparent creator content: here's exactly what changed when I started growing my wedding account. 📱\n\nSpoiler: it wasn't better photos. It wasn't more hashtags. It was one specific shift in HOW I framed my content.\n\nI'm spilling everything in this video — follow along and tell me what you're struggling with in your own account! 👇",
+          "hashtags": ["#ContentCreator", "#WeddingCreator", "#ContentCreatorTips", "#GrowOnInstagram", "#WeddingInfluencer", "#CreatorLife", "#InstagramGrowth"],
+          "content_tip": "Creator-transparency content is extremely popular. Share real analytics screenshots. Builds loyal community.",
+          "image_prompt": "A content creator sitting with a ring light and camera, editing wedding photos on a laptop surrounded by planning materials, authentic and relatable workspace photography"
+        },
+        {
+          "day": 30,
+          "topic": "30-Day Wedding Content Challenge Wrap-Up",
+          "hook": "30 days. 30 posts. Here's everything I learned about creating wedding content that actually works.",
+          "format": "Carousel",
+          "caption": "30 days ago, I committed to posting every single day for wedding content creators. Here's what I learned — and what the data actually shows. 📊\n\nSwipe for:\n→ My top 3 performing post types\n→ The format that flopped\n→ My biggest engagement surprise\n→ What I'm doing differently in month 2\n\nIf you followed along for any part of this challenge — THANK YOU. Drop 💛 in the comments if this helped your planning or your content strategy!\n\nSave this as a reference for YOUR next 30-day content push. 🔖",
+          "hashtags": ["#30DayChallenge", "#WeddingContentCreator", "#ContentStrategy", "#WeddingPlanning", "#ContentCreatorLife", "#WeddingCommunity", "#ContentPlan"],
+          "content_tip": "Wrap-up content drives massive engagement and new follows. Shows consistency and authority. Perfect for pinning.",
+          "image_prompt": "A flat lay of 30 days of content planning: notebooks, printed post mockups, analytics charts, coffee cup and flowers on a white desk, organized and editorial lifestyle photography"
+        }
+      ]
+    }
+  ]
+}
